@@ -1,0 +1,18 @@
+{
+  "name": "mcss2scss",
+  "description": "A MCSS-to-SCSS converter",
+  "version": "0.1.0",
+  "author": "Sensen <rainforest92@126.com>",
+  "main": "./src/index.js",
+  "repository": "git://github.com/rainfore/mcss2scss.git",
+  "bugs": {
+    "url": "http://github.com/rainfore/mcss2scss/issues"
+  },
+  "license": "MIT",
+  "keywords": ["mcss", "scss", "converter"],
+  "tags": ["mcss", "scss", "converter"],
+  "dependencies": {},
+  "devDependencies": {
+    "mcss": "^0.5.1"
+  }
+}

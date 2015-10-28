@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+var filepath = process.argv[2];
+if(!filepath)
+    process.exit(1);
+
+var fs = require('fs');
+var path = require('path');
+var mcss2scss = require('../src/index.js');
+
+var src = fs.readFileSync(filepath) + '';
+console.log(mcss2scss(src));
+
+// json.version = version;
+// fs.writeFileSync(path.join(__dirname, '../package.json'), JSON.stringify(json, null, '  ') + '\n', {encoding: 'utf8'});
