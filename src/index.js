@@ -18,6 +18,9 @@ module.exports = function(src, options) {
         .replace(/\$([\w-]+?)\s*:\s*(.*?)\s*;/g, '@include $1($2);')    // $function:  -> @include mixin
         .replace(/@for(.*?)of(.*?)\.{3}/g, '@for$1from$2 through ')    // @for of ... -> @for from through
         .replace(/@for(.*?)in/g, '@each$1in')    // @for in -> @each in
+        .replace(/\s*\&\&\s*/g, ' and ')    // && -> and
+        .replace(/\s*\|\|\s*/g, ' or ')    // || -> or
+        // .replace(/\s*!\s*/g, ' not ')    // ! -> not
         .replace(/\$([\w-]+?)\s*\??=(?!=)([\s\S]+?)([;,\(\)\{\}])/g, '$$$1:$2$3')    // = -> :
     ;
 
